@@ -4,9 +4,9 @@ EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
-Title ""
-Date ""
-Rev ""
+Title "STM32 Programming Ports"
+Date "2022-05-07"
+Rev "V02"
 Comp ""
 Comment1 ""
 Comment2 ""
@@ -25,10 +25,10 @@ F 3 "http://infocenter.arm.com/help/topic/com.arm.doc.ddi0314h/DDI0314H_coresigh
 	1    0    0    -1  
 $EndComp
 $Comp
-L Connector:Conn_ARM_JTAG_SWD_20 J2
+L Connector:Conn_ARM_JTAG_SWD_20 J3
 U 1 1 61852B34
 P 2100 5350
-F 0 "J2" H 1571 5396 50  0000 R CNN
+F 0 "J3" H 1571 5396 50  0000 R CNN
 F 1 "Conn_ARM_JTAG_SWD_20" H 1571 5305 50  0000 R CNN
 F 2 "Connector_IDC:IDC-Header_2x10_P2.54mm_Vertical" H 2550 4300 50  0001 L TNN
 F 3 "http://infocenter.arm.com/help/topic/com.arm.doc.dui0499b/DUI0499B_system_design_reference.pdf" V 1750 4100 50  0001 C CNN
@@ -36,12 +36,12 @@ F 3 "http://infocenter.arm.com/help/topic/com.arm.doc.dui0499b/DUI0499B_system_d
 	1    0    0    -1  
 $EndComp
 $Comp
-L STM32_programming_ports:st-linkv2-clone-port U1
+L STM32_programming_ports:st-linkv2-clone-port J2
 U 1 1 61853D65
 P 2000 3300
-F 0 "U1" H 1573 3371 50  0000 R CNN
+F 0 "J2" H 1573 3371 50  0000 R CNN
 F 1 "st-linkv2-clone-port" H 1573 3280 50  0000 R CNN
-F 2 "Connector_IDC:IDC-Header_2x05_P2.54mm_Vertical" H 2750 2800 50  0001 C CNN
+F 2 "Connector_IDC:IDC-Header_2x05_P2.54mm_Horizontal" H 2750 2800 50  0001 C CNN
 F 3 "" H 2750 2800 50  0001 C CNN
 	1    2000 3300
 	1    0    0    -1  
@@ -207,26 +207,15 @@ $EndComp
 Wire Wire Line
 	2250 2550 2250 2450
 $Comp
-L Connector:Conn_01x02_Male J3
+L Connector:Conn_01x02_Male J4
 U 1 1 61868972
 P 2450 2650
-F 0 "J3" H 2422 2532 50  0000 R CNN
+F 0 "J4" H 2422 2532 50  0000 R CNN
 F 1 "Conn_01x02_Male" H 2422 2623 50  0000 R CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 2450 2650 50  0001 C CNN
 F 3 "~" H 2450 2650 50  0001 C CNN
 	1    2450 2650
 	-1   0    0    1   
-$EndComp
-$Comp
-L Connector:Conn_01x04_Female J4
-U 1 1 6186A2A1
-P 3950 1900
-F 0 "J4" H 3978 1876 50  0000 L CNN
-F 1 "Conn_01x04_Female" H 3978 1785 50  0000 L CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical" H 3950 1900 50  0001 C CNN
-F 3 "~" H 3950 1900 50  0001 C CNN
-	1    3950 1900
-	1    0    0    -1  
 $EndComp
 $Comp
 L power:+3V3 #PWR07
@@ -284,10 +273,10 @@ Wire Wire Line
 Wire Wire Line
 	4650 2900 4600 2900
 $Comp
-L power:+3V3 #PWR010
+L power:+3V3 #PWR012
 U 1 1 61872506
 P 4650 2900
-F 0 "#PWR010" H 4650 2750 50  0001 C CNN
+F 0 "#PWR012" H 4650 2750 50  0001 C CNN
 F 1 "+3V3" H 4665 3073 50  0000 C CNN
 F 2 "" H 4650 2900 50  0001 C CNN
 F 3 "" H 4650 2900 50  0001 C CNN
@@ -298,10 +287,10 @@ Wire Wire Line
 	4450 3700 4550 3700
 Connection ~ 4450 3700
 $Comp
-L power:GND #PWR09
+L power:GND #PWR011
 U 1 1 61871723
 P 4450 3700
-F 0 "#PWR09" H 4450 3450 50  0001 C CNN
+F 0 "#PWR011" H 4450 3450 50  0001 C CNN
 F 1 "GND" H 4455 3527 50  0000 C CNN
 F 2 "" H 4450 3700 50  0001 C CNN
 F 3 "" H 4450 3700 50  0001 C CNN
@@ -323,10 +312,10 @@ Wire Wire Line
 Wire Wire Line
 	5400 3450 5100 3450
 $Comp
-L STM32_programming_ports:st-linkv2-clone-port U2
+L STM32_programming_ports:st-linkv2-clone-port J7
 U 1 1 61871712
 P 4600 3300
-F 0 "U2" H 4173 3371 50  0000 R CNN
+F 0 "J7" H 4173 3371 50  0000 R CNN
 F 1 "st-linkv2-clone-port" H 4173 3280 50  0000 R CNN
 F 2 "Connector_IDC:IDC-Header_2x05_P2.54mm_Vertical" H 5350 2800 50  0001 C CNN
 F 3 "" H 5350 2800 50  0001 C CNN
@@ -334,115 +323,104 @@ F 3 "" H 5350 2800 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Switch:SW_Push SW?
+L Switch:SW_Push SW1
 U 1 1 61DD6C6E
-P 5350 1900
-F 0 "SW?" V 5396 1852 50  0000 R CNN
-F 1 "SW_Push" V 5305 1852 50  0000 R CNN
-F 2 "" H 5350 2100 50  0001 C CNN
-F 3 "~" H 5350 2100 50  0001 C CNN
-	1    5350 1900
+P 7200 3300
+F 0 "SW1" V 7246 3252 50  0000 R CNN
+F 1 "SW_Push" V 7155 3252 50  0000 R CNN
+F 2 "custom_buttons_switches:TSB008" H 7200 3500 50  0001 C CNN
+F 3 "~" H 7200 3500 50  0001 C CNN
+	1    7200 3300
 	0    -1   -1   0   
 $EndComp
-Text Label 5200 1550 0    50   ~ 0
+Text Label 7050 2950 0    50   ~ 0
 RST
 Wire Wire Line
-	5200 1550 5350 1550
+	7050 2950 7200 2950
 Wire Wire Line
-	5350 1550 5350 1700
+	7200 2950 7200 3100
 $Comp
-L power:GND #PWR?
+L power:GND #PWR017
 U 1 1 61DDA591
-P 5350 2150
-F 0 "#PWR?" H 5350 1900 50  0001 C CNN
-F 1 "GND" H 5355 1977 50  0000 C CNN
-F 2 "" H 5350 2150 50  0001 C CNN
-F 3 "" H 5350 2150 50  0001 C CNN
-	1    5350 2150
+P 7200 3550
+F 0 "#PWR017" H 7200 3300 50  0001 C CNN
+F 1 "GND" H 7205 3377 50  0000 C CNN
+F 2 "" H 7200 3550 50  0001 C CNN
+F 3 "" H 7200 3550 50  0001 C CNN
+	1    7200 3550
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	5350 2150 5350 2100
+	7200 3550 7200 3500
 $Comp
-L Connector:Conn_01x05_Female J?
-U 1 1 61DDB566
-P 6650 1950
-F 0 "J?" H 6678 1976 50  0000 L CNN
-F 1 "Conn_01x05_Female" H 6678 1885 50  0000 L CNN
-F 2 "" H 6650 1950 50  0001 C CNN
-F 3 "~" H 6650 1950 50  0001 C CNN
-	1    6650 1950
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:+3V3 #PWR?
+L power:+3V3 #PWR013
 U 1 1 61DDC214
-P 6400 1700
-F 0 "#PWR?" H 6400 1550 50  0001 C CNN
-F 1 "+3V3" H 6415 1873 50  0000 C CNN
-F 2 "" H 6400 1700 50  0001 C CNN
-F 3 "" H 6400 1700 50  0001 C CNN
-	1    6400 1700
+P 5350 1600
+F 0 "#PWR013" H 5350 1450 50  0001 C CNN
+F 1 "+3V3" H 5365 1773 50  0000 C CNN
+F 2 "" H 5350 1600 50  0001 C CNN
+F 3 "" H 5350 1600 50  0001 C CNN
+	1    5350 1600
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	6400 1700 6400 1750
+	5350 1600 5350 1650
 Wire Wire Line
-	6400 1750 6450 1750
+	5350 1650 5400 1650
 $Comp
-L power:GND #PWR?
+L power:GND #PWR014
 U 1 1 61DDC21C
-P 6400 2200
-F 0 "#PWR?" H 6400 1950 50  0001 C CNN
-F 1 "GND" H 6405 2027 50  0000 C CNN
-F 2 "" H 6400 2200 50  0001 C CNN
-F 3 "" H 6400 2200 50  0001 C CNN
-	1    6400 2200
+P 5350 2100
+F 0 "#PWR014" H 5350 1850 50  0001 C CNN
+F 1 "GND" H 5355 1927 50  0000 C CNN
+F 2 "" H 5350 2100 50  0001 C CNN
+F 3 "" H 5350 2100 50  0001 C CNN
+	1    5350 2100
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	6400 2200 6400 2150
+	5350 2100 5350 2050
 Wire Wire Line
-	6400 2150 6450 2150
-Text Label 6150 1950 0    50   ~ 0
+	5350 2050 5400 2050
+Text Label 5100 1850 0    50   ~ 0
 SWDIO
-Text Label 6150 2050 0    50   ~ 0
+Text Label 5100 1950 0    50   ~ 0
 SWCLK
 Wire Wire Line
-	6150 2050 6450 2050
+	5100 1950 5400 1950
 Wire Wire Line
-	6450 1950 6150 1950
-Text Label 6150 1850 0    50   ~ 0
+	5400 1850 5100 1850
+Text Label 5100 1750 0    50   ~ 0
 RST
 Wire Wire Line
-	6150 1850 6450 1850
+	5100 1750 5400 1750
 $Comp
-L Device:LED D?
+L Device:LED D1
 U 1 1 61DE1F8E
 P 6450 3550
-F 0 "D?" V 6489 3432 50  0000 R CNN
+F 0 "D1" V 6489 3432 50  0000 R CNN
 F 1 "Red" V 6398 3432 50  0000 R CNN
-F 2 "" H 6450 3550 50  0001 C CNN
+F 2 "LED_SMD:LED_1206_3216Metric_Pad1.42x1.75mm_HandSolder" H 6450 3550 50  0001 C CNN
 F 3 "~" H 6450 3550 50  0001 C CNN
 	1    6450 3550
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Device:R R?
+L Device:R R1
 U 1 1 61DE2234
 P 6450 3200
-F 0 "R?" H 6520 3246 50  0000 L CNN
+F 0 "R1" H 6520 3246 50  0000 L CNN
 F 1 "3K9" H 6520 3155 50  0000 L CNN
-F 2 "" V 6380 3200 50  0001 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder" V 6380 3200 50  0001 C CNN
 F 3 "~" H 6450 3200 50  0001 C CNN
 	1    6450 3200
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:+3V3 #PWR?
+L power:+3V3 #PWR015
 U 1 1 61DE2F15
 P 6450 3000
-F 0 "#PWR?" H 6450 2850 50  0001 C CNN
+F 0 "#PWR015" H 6450 2850 50  0001 C CNN
 F 1 "+3V3" H 6465 3173 50  0000 C CNN
 F 2 "" H 6450 3000 50  0001 C CNN
 F 3 "" H 6450 3000 50  0001 C CNN
@@ -450,10 +428,10 @@ F 3 "" H 6450 3000 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR?
+L power:GND #PWR016
 U 1 1 61DE3070
 P 6450 3750
-F 0 "#PWR?" H 6450 3500 50  0001 C CNN
+F 0 "#PWR016" H 6450 3500 50  0001 C CNN
 F 1 "GND" H 6455 3577 50  0000 C CNN
 F 2 "" H 6450 3750 50  0001 C CNN
 F 3 "" H 6450 3750 50  0001 C CNN
@@ -472,6 +450,83 @@ Text Notes 1550 2900 0    50   ~ 0
 Input Port
 Text Notes 4100 2850 0    50   ~ 0
 Clone-Port
-Text Notes 4450 4750 0    50   ~ 0
-TODO: add USB/UART port
+$Comp
+L MYCLEO:FOUR_WIRE_CONN J6
+U 1 1 627702EC
+P 3950 1550
+F 0 "J6" H 4228 1196 50  0000 L CNN
+F 1 "FOUR_WIRE_CONN" H 4228 1105 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical" H 3950 1550 50  0001 C CNN
+F 3 "" H 3950 1550 50  0001 C CNN
+	1    3950 1550
+	1    0    0    -1  
+$EndComp
+$Comp
+L MYCLEO:SW_WITH_RST J8
+U 1 1 62770BFE
+P 5600 2100
+F 0 "J8" H 5878 2396 50  0000 L CNN
+F 1 "SW_WITH_RST" H 5878 2305 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x05_P2.54mm_Vertical" H 5700 2700 50  0001 C CNN
+F 3 "" H 5700 2700 50  0001 C CNN
+	1    5600 2100
+	1    0    0    -1  
+$EndComp
+$Comp
+L MYCLEO:6PinDebugPort J5
+U 1 1 62775A86
+P 3850 4650
+F 0 "J5" H 4428 4746 50  0000 L CNN
+F 1 "6PinDebugPort" H 4428 4655 50  0000 L CNN
+F 2 "Connector_IDC:IDC-Header_2x03_P2.54mm_Vertical" H 3850 5450 50  0001 C CNN
+F 3 "" H 3850 5450 50  0001 C CNN
+	1    3850 4650
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3V3 #PWR09
+U 1 1 627769A9
+P 3850 4300
+F 0 "#PWR09" H 3850 4150 50  0001 C CNN
+F 1 "+3V3" H 3865 4473 50  0000 C CNN
+F 2 "" H 3850 4300 50  0001 C CNN
+F 3 "" H 3850 4300 50  0001 C CNN
+	1    3850 4300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3850 4300 3850 4350
+Wire Wire Line
+	3850 4350 3900 4350
+$Comp
+L power:GND #PWR010
+U 1 1 62777DF2
+P 3850 4900
+F 0 "#PWR010" H 3850 4650 50  0001 C CNN
+F 1 "GND" H 3855 4727 50  0000 C CNN
+F 2 "" H 3850 4900 50  0001 C CNN
+F 3 "" H 3850 4900 50  0001 C CNN
+	1    3850 4900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3850 4900 3850 4850
+Wire Wire Line
+	3850 4850 3900 4850
+Text Label 3600 4650 0    50   ~ 0
+SWDIO
+Text Label 3600 4750 0    50   ~ 0
+SWCLK
+Wire Wire Line
+	3600 4750 3900 4750
+Wire Wire Line
+	3900 4650 3600 4650
+Text Label 3600 4550 0    50   ~ 0
+RST
+Wire Wire Line
+	3600 4550 3900 4550
+Text Label 3600 4450 0    50   ~ 0
+SWIM
+Wire Wire Line
+	3600 4450 3900 4450
 $EndSCHEMATC
